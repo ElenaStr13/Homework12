@@ -186,15 +186,27 @@ h1,
     background-color: var(--blue-);
     color: white;
     border-radius: 50%;
-    top: 45px;
-    left: 18px;
-    transform-origin: 50% 50% 126px;
+    top: -12px;
+    left: 139px;
+    transform-origin: 50% 163px;
 }
 .plus-two--left {
-    transform: rotate(270deg);
+    transform: rotate(310deg);
 }
 .plus-three--left {
-    transform: rotate(220deg);
+    transform: rotate(270deg);
+}
+.plus-four--left {
+    transform: rotate(230deg);
+}
+.plus-two--right {
+    transform: rotate(50deg);
+}
+.plus-three--right {
+    transform: rotate(90deg);
+}
+.plus-four--right {
+    transform: rotate(130deg);
 }
 .teeth-text--title {
     font-weight: 600;
