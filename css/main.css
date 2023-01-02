@@ -154,26 +154,31 @@ h1,
 
 /*teeth*/
 .teeth {
-    margin: 0 auto;
-    
+    display: flex;
+    text-align: center;
+    align-items: center;
 }
-
+.teeth-circle {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 557px;
+}
 .circle {
     width: 302px;
     height: 302px;
     border-radius: 50%;
     border: 1px solid black;
-    position: relative;
+    position: absolute;
     margin-top: 50px;
 }
-
 .teeth-img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .plus {
     position: absolute;
     width: 24px;
@@ -181,17 +186,65 @@ h1,
     background-color: var(--blue-);
     color: white;
     border-radius: 50%;
-    
+    top: 45px;
+    left: 18px;
+    transform-origin: 50% 50% 126px;
 }
-
+.plus-two--left {
+    transform: rotate(270deg);
+}
+.plus-three--left {
+    transform: rotate(220deg);
+}
 .teeth-text--title {
     font-weight: 600;
     font-size: 20px;
 }
-
 .teeth-text {
     width: 340px;
     font-size: 16px;
+}
+.for-teeth {
+    position: relative;
+    text-align: end;
+}
+.text-start {
+    text-align: start;
+}
+.text-left, .text-right{
+    position: absolute;
+}
+.teeth-top--1 {
+    left: 150px;
+    top: -550px;
+}
+.teeth-top--2 {
+    left: 760px;
+    top: -550px;
+}
+.teeth-center--1 {
+    left: 120px;
+    top: -430px;
+}
+.teeth-center--2 {
+    left: 800px;
+    top: -430px;
+}
+.teeth-bottom--1 {
+    left: 150px;
+    top: -260px;
+}
+.teeth-bottom--2 {
+    left: 750px;
+    top: -260px;
+}
+
+/*atetion*/
+.atetion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 110px;
 }
 
 /*data user*/
