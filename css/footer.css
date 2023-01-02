@@ -74,6 +74,27 @@ footer {
     padding-left: 25px;
     padding-right: 25px;
 }
+
+@media(max-width: 768px) and (min-width: 480px) {
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .dark-logo>span:first-child {
+        font-size: 27px;
+    }
+    .leftpart-footer {
+        margin-right: 0px;
+        padding-left: 10px;
+    }
+    .white-text {
+        padding-left: 10px;
+    }
+    .text-footer {
+        grid-template-columns: 150px 1fr;
+    } 
+}
+
 @media (max-width: 480px) {
 footer {
     flex-direction: column;
