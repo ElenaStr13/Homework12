@@ -157,20 +157,22 @@ h1,
     display: flex;
     text-align: center;
     align-items: center;
+    flex-direction: column;
+    
 }
 .teeth-circle {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-bottom: 557px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    
 }
 .circle {
     width: 302px;
     height: 302px;
     border-radius: 50%;
     border: 1px solid black;
-    position: absolute;
+    position: relative;
     margin-top: 50px;
 }
 .teeth-img {
@@ -217,46 +219,37 @@ h1,
     font-size: 16px;
 }
 .for-teeth {
-    position: relative;
-    text-align: end;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
 }
-.text-start {
-    text-align: start;
+.for-teeth-leftpart {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 3;
+    text-align: end;    
 }
-.text-left, .text-right{
-    position: absolute;
-}
-.teeth-top--1 {
-    left: 150px;
-    top: -550px;
-}
-.teeth-top--2 {
-    left: 760px;
-    top: -550px;
-}
-.teeth-center--1 {
-    left: 120px;
-    top: -430px;
-}
-.teeth-center--2 {
-    left: 800px;
-    top: -430px;
-}
-.teeth-bottom--1 {
-    left: 150px;
-    top: -260px;
-}
-.teeth-bottom--2 {
-    left: 750px;
-    top: -260px;
+.teeth-center--1>div {
+    padding-right: 60px;
 }
 
+.for-teeth-rightpart {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 3;
+    text-align: start; 
+    margin-top: 30px;   
+}
+.teeth-center--2>div {
+    padding-left: 50px;
+}
 /*atetion*/
 .atetion {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 110px;
+    margin-top: 60px;
 }
 
 /*data user*/
