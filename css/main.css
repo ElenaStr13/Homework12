@@ -18,18 +18,28 @@ main {
     font-family: 'Roboto';
     font-weight: 400;
 }
-h1, title {
+
+/*text and button*/
+h1, .title-blue_text {
     font-weight: 700;
     font-size: 40px;
     width: 530px;
 }
-.title {
-    color: var(--blue-);
-}
+
 .title-text {
     width: 464px;
     font-size: 16px;
 }
+
+.title-blue, .blue-text, .title-blue_text {
+    color: var(--blue-);
+}
+.text {
+    margin-top: 5px;
+    width: 612px;
+    margin: 0 auto;
+}
+
 .btn {
     margin-top: 48px;
 }
@@ -52,6 +62,8 @@ h1, title {
     padding: 16px 46.5px;
     border: 1px solid white;
 }
+
+/*lady image and three card*/
 .lady {
     position: absolute;
     top: 105px;
@@ -74,23 +86,12 @@ h1, title {
     border-radius: 8px;
     align-items: center;
 }
+
+/*table*/
 .table-all {
     margin-top: 90px;
     text-align: center;
 }
-.title-text {
-    font-size: 16px;
-}
-.title-blue, .blue-text {
-    color: var(--blue-);
-}
-.text {
-    margin-top: 5px;
-    width: 612px;
-    margin: 0 auto;
-}
-
-/*table*/
 .table-static {
     display: grid;
     grid-template-columns: repeat(3, 300px);
@@ -132,7 +133,7 @@ h1, title {
     font-weight: 700;
 }
 
-/*teeth*/
+/*teeth diagram*/
 .teeth {
     display: flex;
     text-align: center;
@@ -219,6 +220,7 @@ h1, title {
 .teeth-center--2>div {
     padding-left: 50px;
 }
+
 /*atetion*/
 .atetion {
     display: flex;
@@ -274,7 +276,12 @@ h1, title {
     margin-right: 67px;
     border-radius: 8px;
 }
-
+.one-btn:hover {
+    border: 2px solid #46B1DE;
+}
+.text-user:focus {
+    border: 2px solid #46B1DE;
+}
 button {
     border-color: #D9D9D9;
     border: 1px solid #D9D9D9;
@@ -309,11 +316,11 @@ button {
     padding-bottom: 16px;
     padding-left: 16px;
 }
-
 .line {
     padding: 13px;
 }
 
+/*foto galery*/
 .gallery {
     display: flex;
     flex-direction: row;
@@ -321,12 +328,24 @@ button {
     margin-top: 90px;
     align-items: center;
 }
-
 .foto {
     width: 280px;
     height: 128px;
     border-radius: 8px;
     margin-right: 70px;
+}
+
+/*MEDIA*/
+
+@media(max-width: 1024px) and (min-width: 992px) {
+    .table-static {
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: 3fr;
+        padding-left: 10px;
+        padding-right: 0;
+        gap: 10px;
+        justify-content: center;
+    }
 }
 
 @media(max-width: 992px) and (min-width: 768px) {
@@ -487,9 +506,8 @@ button {
     }
     .menu-main {
         width: 130%;
-
     }
-    h1, .title {
+    h1, .title-blue_text {
         font-size: 22px;
     }
     .title-text {
@@ -497,23 +515,25 @@ button {
     }
     .btn {
         display: flex;
-        
     }
     .btn-tel {
         margin-left: 0;
         margin-right: 50px;
     }
-
     .lady {
         left: 15px;
         height: 200px;
         top: 230px
     }
+    .card-all {
+        flex-direction: column;
+        align-items: start;
+        margin-left: 10px;
+    }
     .table-all {
         text-align: left;
         margin-left: 10px;
     }
-
     .text-title {
         text-transform: uppercase;
         font-size: 20px;

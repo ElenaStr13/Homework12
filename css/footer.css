@@ -42,6 +42,13 @@ footer {
     margin-top: 30px;
     margin-bottom: 95px;
 }
+.language>span {
+    position: relative;
+}
+.language>span:first-child::after {
+    content: "|";
+    padding-left: 5px;
+}
 .hours-work {
     grid-column: 2/2;
     grid-row: 2/4;
@@ -65,6 +72,24 @@ footer {
 .white-text>div:last-child {
     margin-bottom: 40px;
 }
+.phone {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding-left: 25px;
+}
+.phone::before {
+    content: '';
+    background-image: url("../img/-phone-telephone.png");
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: -6px;
+}
+.phone:hover {
+    text-decoration: underline;
+    color: white;
+}
 .icons {
     display: flex;
     align-content: flex-end;
@@ -74,7 +99,40 @@ footer {
     padding-left: 25px;
     padding-right: 25px;
 }
-
+.instagram {
+    font-size: 20px;
+    position: relative;
+    padding-left: 25px;
+}
+.instagram::before {
+    content: '';
+    background-image: url("../img/icons8-instagram\ 1.png");
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    left: -5px;
+}
+.email {
+    color: white;
+    font-size: 20px;
+    position: relative;
+    padding-left: 25px;
+}
+.email::before {
+    content: '';
+    background-image: url("../img/Email_icon-icons.com_55919\ 1.png");
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    left: -5px;
+}
+.email:hover {
+    text-decoration: underline;
+    color: white;
+}
+.footer-preferences:hover, .footer-menu:hover, .language>span:hover {
+    color: white;
+} 
 @media(max-width: 768px) and (min-width: 480px) {
     footer {
         flex-direction: column;
