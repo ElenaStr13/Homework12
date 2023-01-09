@@ -456,8 +456,8 @@ h1,
 @keyframes textForTeeth {
     from {
        /*position: absolute;*/
-       left: -10px;
-       top: -10px;
+       left: -20px;
+       top: -20px;
     }
 
     to {
