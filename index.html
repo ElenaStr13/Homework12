@@ -13,14 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
 
-    <title>Homework14</title>
+    <title>Homework15</title>
 </head>
 
 <body>
     <header>
         <div class="container">
             <div class="menu">
-                <div class="logo">
+                <div class="logo-top logo">
                     <svg width="72" height="80">
                         <use xlink:href="./svg/sprite.svg#blueTeeth"></use>
                     </svg>
@@ -28,6 +28,21 @@
                         <span id="logoname">DR Nikola Tesla</span><br>
                         <span>dentist</span>
                     </div>
+                </div>
+                <div class="header-menu__wrap">
+                    <input id="burger" type="checkbox" />
+                    <label for="burger" class="burger__label">
+                        <span class="line-burger line--1"></span>
+                        <span class="line-burger line--2"></span>
+                        <span class="line-burger line--3"></span>
+                    </label>
+                    <nav>
+                        <ul class="header__list">
+                            <li><a href="#" class="header__link">Preferences</a></li>
+                            <li><a href="#" class="header__link">Services</a></li>
+                            <li><a href="#" class="header__link">Contacts</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 <nav>
                     <ul class="menu-text">
@@ -66,24 +81,24 @@
                 <div class="card-all">
                     <div class="card">
                         <span class="number">15</span>
-                        <span>Years providing dental
+                        <span class="card-text">Years providing dental
                             treatment services
                             for adults and children</span>
                     </div>
                     <div class="card">
                         <span class="number">90%</span>
-                        <span>Clients Contacts
+                        <span class="card-text">Clients Contacts
                             me again</span>
                     </div>
                     <div class="card">
                         <span class="number">12</span>
-                        <span>moonths service warranty</span>
+                        <span class="card-text">moonths service warranty</span>
                     </div>
                 </div>
 
                 <div class="table-all">
                     <span class="text-title">WHY YOU SHOULD CHOOSE <span class="title-blue">EXACTLY ME?</span></span>
-                    <div class="text">Over 15 years of professional experience! More than 2000 people
+                    <div class="text--table">Over 15 years of professional experience! More than 2000 people
                         have used my services! More than 70% of patients apply for recommendations</div>
 
                     <div class="table-static">
@@ -138,6 +153,7 @@
             </div>
         </section>
 
+        <!--FOR TEETH DIAGRAM-->
         <div class="teeth">
             <div class="text-title">
                 WHAT <span class="blue-text">SERVICES</span> DO I PROVIDE?
@@ -146,14 +162,15 @@
                 <div class="for-teeth-leftpart">
                     <div class="text-left teeth-top--1">
                         <div class="teeth-text--title blue-text">THERAPEUTIC HELP</div>
-                        <div class="teeth-text">Treatment of caries, pulpitis, periodontitis, aesthetic restoration of
+                        <div class="teeth-text text-top">Treatment of caries, pulpitis, periodontitis, aesthetic
+                            restoration of
                             teeth. Do not wait for acute manifestations of the disease. I will cure everything
                             qualitatively
                         </div>
                     </div>
                     <div class="text-left teeth-center--1">
-                        <div class="teeth-text--title blue-text">SURGICAL CARE</div>
-                        <div class="teeth-text">Painless and atraumatic
+                        <div class="teeth-text--title blue-text center-text">SURGICAL CARE</div>
+                        <div class="teeth-text center-text">Painless and atraumatic
                             removal of teeth. We will give you the necessary recommendations for recovery
                             taking into account all your features</div>
                     </div>
@@ -194,6 +211,8 @@
                 </div>
             </div>
         </div>
+        
+        <!--Atetion-->
         <div class="atetion">
             <img src="./img/attention.png" alt="atetion">
             <span class="blue-text">The sooner you see a doctor, the cheaper it will cost.</span>
