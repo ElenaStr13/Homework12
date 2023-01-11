@@ -40,7 +40,7 @@ header {
 
 svg {
   fill: #46B1DE;
-  z-index: 999;
+  z-index: 100;
 }
 
 .menu {
@@ -118,7 +118,7 @@ li>a:hover {
 
 .header-menu__wrap {
   display: none;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-items: center;
 }
 
@@ -127,7 +127,7 @@ li>a:hover {
   flex-direction: column;
   gap: 10px;
   text-align: center;
-  padding-top: 20px;
+  margin-top: 80px;
   position: relative;
   left: -150px;
 }
@@ -223,7 +223,7 @@ input:checked~nav {
 @media(max-width: 480px) {
   .logo-top {
     position: relative;
-    top: -390px;
+    top: -160px;
   }
 
   .header-menu__wrap {
@@ -233,6 +233,7 @@ input:checked~nav {
   #logoname {
     font-size: 12px;
     text-shadow: #000 0px 1px 1px;
+   
   }
 
   .logo-text>span {
@@ -241,16 +242,27 @@ input:checked~nav {
 
   #phone {
     top: 7px;
-    left: -180px;
+    left: -200px;
     font-size: 10px;
+    
   }
 
   .language-menu {
     display: none;
   }
-
 }
 
+@media(max-width: 1024px) and (min-width: 992px) {
+.menu-text {
+  gap: 10px;
+}
+#logoname {
+  font-size: 30px;
+}
+li>a {
+  margin-left: 5vw;
+ }
+}
 @media(max-width: 768px) and (min-width: 480px) {
   .menu-text {
     flex-direction: column;

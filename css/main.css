@@ -69,7 +69,7 @@ h1,
 .btn-serv {
     color: var(--blue-);
     background-color: white;
-    padding: 16px 46.5px;
+    padding: 16px 46px;
     border: 1px solid white;
 }
 
@@ -166,7 +166,6 @@ h1,
     text-align: center;
     align-items: center;
     flex-direction: column;
-
 }
 
 .teeth-circle {
@@ -318,12 +317,7 @@ h1,
     background-color: #D9D9D9;
     border-radius: 8px;
 }
-
-.one-btn:hover {
-    border: 2px solid #46B1DE;
-}
-
-.text-user:focus {
+.one-btn:has(input:focus) {
     border: 2px solid #46B1DE;
 }
 
@@ -431,41 +425,69 @@ h1,
     animation-name: plusTeeth;
     animation-duration: 2s;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: alternate-reverse;
 }
 
 @keyframes plusTeeth {
     from {
-        /* transform: translateX(5vw);
-       transform: translateY(5vw);*/
-        transform-origin: 50% 0;
+        transform-origin: 50% 163px;
     }
 
     to {
-        /* transform: translateX(0);
-       transform: translateX(0);*/
-       transform-origin: 50% 163px;
+        transform-origin: 50% 12px;
+        top: 140px;
     }
 }
 
-.for-teeth-leftpart {
+.teeth-center--1,
+.teeth-center--2,
+.teeth-bottom--1,
+.teeth-bottom--2 {
     animation-name: textForTeeth;
     animation-duration: 2s;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+.teeth-top--1,
+.teeth-top--2 {
+    animation-name: textForTeethUp;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes textForTeethUp {
+    0% {
+        margin-top: -50px;
+    }
+
+    50% {
+        margin-top: -25px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+
 }
 
 @keyframes textForTeeth {
-    from {
-       /*position: absolute;*/
-       left: -20px;
-       top: -20px;
+    0% {
+        padding: 50px;
     }
 
-    to {
-        /*position: absolute;*/
-        left: 0px;
-        top: 0px;
-       
+    50% {
+        padding: 25px;
     }
+
+    100% {
+        padding: 0px;
+    }
+
 }
 
 
@@ -484,13 +506,13 @@ h1,
 }
 
 @media(max-width: 1024px) and (min-width: 992px) {
+   
     .table-static {
-        grid-template-columns: repeat(2, 300px);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 3fr;
-        padding-left: 10px;
-        padding-right: 0;
+        width: 60vw;
         gap: 10px;
-        justify-content: center;
+        align-items: center;
     }
 
     .card {
@@ -592,7 +614,7 @@ h1,
 @media(max-width: 768px) and (min-width: 480px) {
     .card-all {
         flex-direction: column;
-        align-items: start;
+        align-items: center;
         margin-left: 10px;
     }
 
@@ -603,7 +625,7 @@ h1,
     }
 
     .table-all {
-        text-align: left;
+        text-align: center;
         margin-left: 5px;
     }
 
@@ -646,19 +668,21 @@ h1,
         align-self: flex-start;
         padding: 10px;
     }
-
+.for-teeth-leftpart {
+    align-items: center;
+}
     .atetion {
-        justify-content: left;
+        justify-content: center;
     }
-
     .user-btn {
         display: flex;
         flex-direction: column;
+        
     }
 
     .user-data {
         width: 520px;
-        margin-left: 10px;
+        margin: 0 auto;
     }
 
     .container-btn {
@@ -707,6 +731,7 @@ h1,
 
     .btn {
         display: flex;
+        margin-left: 5vw;
     }
 
     .btn-tel {
@@ -728,7 +753,7 @@ h1,
 
     .table-all {
         text-align: left;
-        margin-left: 10px;
+        margin-left: 1vw;
     }
 
     .text-title {
@@ -760,6 +785,7 @@ h1,
         border-radius: 10px;
         padding: 16px 20px;
         margin-top: 50px;
+
     }
 
     .cell {
@@ -773,7 +799,7 @@ h1,
     }
 
     .for-teeth-leftpart {
-        text-align: start;
+        text-align: center;
     }
 
     .center-text {
@@ -787,8 +813,6 @@ h1,
     .atetion {
         display: flex;
         flex-direction: column;
-        width: 300px;
-        text-align: center;
     }
 
     .gallery {
@@ -797,5 +821,17 @@ h1,
 
     .foto {
         margin-bottom: 15px;
+    }
+
+    .teeth-top--1,
+    .teeth-top--2 {
+        animation: none;
+    }
+
+    .teeth-center--1,
+    .teeth-center--2,
+    .teeth-bottom--1,
+    .teeth-bottom--2 {
+        animation: none;
     }
 }

@@ -133,6 +133,14 @@ footer {
 .footer-preferences:hover, .footer-menu:hover, .language>span:hover {
     color: white;
 } 
+
+/*MEDIA*/
+@media(max-width: 1024px) and (min-width: 992px) {
+    .leftpart-footer {
+        margin-right: 30%;
+    }
+}
+
 @media(max-width: 768px) and (min-width: 480px) {
     footer {
         flex-direction: column;
