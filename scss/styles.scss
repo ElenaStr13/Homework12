@@ -35,18 +35,16 @@ header {
   z-index: 1;
 }
 
-.container {
-  .menu {
-    .logo {
+.logo {
       display: flex;
       align-items: center;
-    }
   }
+.logo-top {
+  color: $blue;
 }
-
-/*mixin*/
-.svg {
-  @include svgLogo($color, $index);
+svg {
+  fill: $blue;
+  z-index: 100;
 }
 
 .container {
@@ -127,9 +125,7 @@ li {
     position: relative;
     padding-left: 15px;
     top: 15px;
-  }
 
-  & {
     span:first-child::after {
       content: "|";
       padding-left: 5px;
@@ -137,23 +133,20 @@ li {
   }
 }
 
+
+
 /*BURGER MENU*/
 .menu {
   .header-menu__wrap {
+    display: none;
+      justify-content: space-between;
+      align-items: center;
+
     #burger {
       display: none;
     }
-
-    & {
-      display: none;
-      justify-content: space-between;
-      align-items: center;
-    }
   }
 }
-
-/*.header-menu__wrap {
- }*/
 
 .header-menu__wrap {
   nav {
@@ -165,9 +158,7 @@ li {
       margin-top: 80px;
       position: relative;
       left: -150px;
-    }
 
-    & {
       .header__link {
         font-weight: 500;
         font-size: 18px;
@@ -180,37 +171,30 @@ li {
   }
 }
 
-.burger__label:hover .header-menu__wrap {
-  .burger__label {
-    display: block;
-    height: 26px;
-    width: 32px;
-    position: absolute;
-    top: 55px;
-    right: 20px;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  & {
-    .line-burger {
-      display: block;
-      height: 4px;
-      width: 100%;
-      border-radius: 10px;
-      background: #0e2431;
-    }
-  }
+.burger__label:hover {
+  cursor: pointer;
 }
 
-/*.burger__label 
-}*/
+.burger__label {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 55px;
+  right: 20px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burger__label .line-burger {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
 
 .burger__label:hover .line-burger:hover {
   background: $blue;
@@ -331,11 +315,10 @@ main {
   margin: 0 auto;
 }
 
-/*lady image and three card*/
 .container{
 .lady {
   position: absolute;
-  top: 100px;
+  top: 230px;
   right: 100px;
 }
 .card-all {
@@ -405,15 +388,21 @@ main {
   text-align: left;
   align-items: center;
   gap: 20px;
-  .number {
-    font-size: 65px;
-    color: $blue;
-  }
   
   .text-table {
     font-weight: 700;
   }
 }
+
+.text-title {
+  text-transform: uppercase;
+  font-size: 34px;
+}
+.number {
+  font-size: 65px;
+  color: $blue;
+}
+
 
 /*teeth diagram*/
 .teeth {
@@ -728,7 +717,7 @@ footer {
   padding-left: 25px;
 }
 
-&::before {
+.phone::before {
   content: '';
   background-image: url("../img/-phone-telephone.png");
   position: absolute;
@@ -755,31 +744,31 @@ footer {
   font-size: 20px;
   position: relative;
   padding-left: 25px;
+  &::before {
+    content: '';
+    background-image: url("../img/icons8-instagram\ 1.png");
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    left: -5px;
+  }
 }
 
-&::before {
-  content: '';
-  background-image: url("../img/icons8-instagram\ 1.png");
-  height: 28px;
-  width: 28px;
-  position: absolute;
-  left: -5px;
-}
+
 
 .email {
   color: white;
   font-size: 20px;
   position: relative;
   padding-left: 25px;
-}
-
-&::before {
-  content: '';
-  background-image: url("../img/Email_icon-icons.com_55919\ 1.png");
-  height: 28px;
-  width: 28px;
-  position: absolute;
-  left: -5px;
+  &::before {
+    content: '';
+    background-image: url("../img/Email_icon-icons.com_55919\ 1.png");
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    left: -5px;
+  }
 }
 
 .email:hover {
@@ -907,627 +896,596 @@ h1,
 }
 
 /*MEDIA*/
+@media(max-width: 1600px) and (min-width: 1200px) {
+  .container {
+      .lady {
+          position: absolute;
+          top: 100px;
+          right: 100px;
+      }
+  }
+}
 
 @media(max-width: 1200px) and (min-width: 1024px) {
   .card {
-    padding: 5px;
-    gap: 5px;
-    width: 70vw;
+      padding: 5px;
+      gap: 5px;
+      width: 70vw;
   }
 
   .card-text {
-    font-size: 12px;
+      font-size: 12px;
   }
+
+  .container {
+      .lady {
+          position: absolute;
+          top: 100px;
+          right: 100px;
+      }
+  }
+
 }
 
 @media(max-width: 1024px) and (min-width: 992px) {
   .menu-text {
-    gap: 10px;
+      gap: 10px;
   }
 
   #logoname {
-    font-size: 30px;
+      font-size: 30px;
   }
 
-  li>a {
-    margin-left: 5vw;
+  li {
+      a {
+          margin-left: 5vw;
+      }
+  }
+
+  .container {
+      .lady {
+          position: absolute;
+          top: 100px;
+          right: 100px;
+      }
   }
 
   .table-static {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 3fr;
-    width: 60vw;
-    gap: 10px;
-    align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 3fr;
+      width: 60vw;
+      gap: 10px;
+      align-items: center;
   }
 
   .card {
-    padding: 5px;
-    gap: 5px;
-    width: 70vw;
+      padding: 5px;
+      gap: 5px;
+      width: 70vw;
   }
 
   .card-text {
-    font-size: 12px;
+      font-size: 12px;
   }
 
   .leftpart-footer {
-    margin-right: 30%;
+      margin-right: 30%;
   }
 }
 
 @media(max-width: 992px) and (min-width: 768px) {
   .menu-text {
-    margin-right: 0px;
+      margin-right: 0px;
   }
 
   li>a {
-    margin-left: 0px;
+      margin-left: 0px;
   }
 
   #phone {
-    left: 35px;
-    top: 18px;
+      left: 35px;
+      top: 18px;
   }
 
   .language-menu {
-    position: relative;
-    top: 50px;
-    left: -40px;
+      position: relative;
+      top: 50px;
+      left: -40px;
   }
 
   .lady {
-    right: -10px;
+      left: 100px;
+      height: 170px;
+      top: 247px
   }
 
   .gallery {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .foto {
-    margin-bottom: 15px;
+      margin-bottom: 15px;
   }
 
   .table-static {
-    grid-template-columns: repeat(2, 300px);
-    grid-template-rows: 3fr;
-    padding-left: 10px;
-    padding-right: 0;
-    gap: 10px;
-    justify-content: left;
+      grid-template-columns: repeat(2, 300px);
+      grid-template-rows: 3fr;
+      padding-left: 10px;
+      padding-right: 0;
+      gap: 10px;
+      justify-content: left;
   }
 
   .card-all {
-    flex-direction: column;
-    align-items: start;
-    margin-left: 10px;
+      flex-direction: column;
+      align-items: start;
+      margin-left: 10px;
   }
 
   .table-all {
-    text-align: left;
-    margin-left: 10px;
+      text-align: left;
+      margin-left: 10px;
   }
 
   .text-title {
-    width: 20vw;
-    font-size: 24px;
+      width: 20vw;
+      font-size: 24px;
   }
 
   .text {
-    margin-top: 5px;
-    width: 612px;
-    margin: 0;
-    margin-left: 5px;
+      margin-top: 5px;
+      width: 612px;
+      margin: 0;
+      margin-left: 5px;
   }
 
   .teeth {
-    padding: 10px;
-    align-items: flex-start;
+      padding: 10px;
+      align-items: flex-start;
   }
 
   .teeth-circle {
-    margin-left: 0;
-    margin-right: 0;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    padding: 10px;
+      margin-left: 0;
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      padding: 10px;
   }
 
   .atetion {
-    justify-content: left;
+      justify-content: left;
   }
 
   .user-btn {
-    display: flex;
-    flex-direction: column;
+      display: flex;
+      flex-direction: column;
   }
 
   .user-data {
-    width: 520px;
-    margin-left: 10px;
+      width: 520px;
+      margin-left: 10px;
   }
 
   .container-btn {
-    height: auto;
-    width: 500px;
+      height: auto;
+      width: 500px;
   }
 
   .user-btn {
-    align-items: center;
+      align-items: center;
   }
 
   .one-btn {
-    margin-top: 10px;
+      margin-top: 10px;
   }
 
 }
 
 @media(max-width: 768px) and (min-width: 480px) {
   .menu-text {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   li>a {
-    margin-left: 0px;
+      margin-left: 0px;
   }
 
   #phone {
-    left: -40px;
-    top: 50px;
-    font-size: 12px;
+      left: -40px;
+      top: 50px;
+      font-size: 12px;
   }
 
   .language-menu {
-    display: none;
+      display: none;
   }
 
   .card-all {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 10px;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 10px;
   }
 
   .lady {
-    left: 100px;
-    height: 170px;
-    top: 247px
+      left: 100px;
+      height: 170px;
+      top: 247px
   }
 
   .table-all {
-    text-align: center;
-    margin-left: 5px;
+      text-align: center;
+      margin-left: 5px;
   }
 
   .table-static {
-    grid-template-columns: repeat(2, 300px);
-    grid-template-rows: 3fr;
-    padding-left: 10px;
-    padding-right: 0;
-    gap: 10px;
-    justify-content: left;
+      grid-template-columns: repeat(2, 300px);
+      grid-template-rows: 3fr;
+      padding-left: 10px;
+      padding-right: 0;
+      gap: 10px;
+      justify-content: left;
   }
 
   .cell {
-    width: 240px;
+      width: 240px;
   }
 
   .text-title {
-    width: 70vw;
-    font-size: 24px;
-    margin-left: 5px;
+      width: 70vw;
+      font-size: 24px;
+      margin-left: 5px;
   }
 
   .text {
-    margin-top: 5px;
-    width: 612px;
-    margin: 0;
-    margin-left: 5px;
+      margin-top: 5px;
+      width: 612px;
+      margin: 0;
+      margin-left: 5px;
   }
 
   .teeth {
-    padding: 10px;
-    align-items: flex-start;
+      padding: 10px;
+      align-items: flex-start;
   }
 
   .teeth-circle {
-    margin-left: 0;
-    margin-right: 0;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    padding: 10px;
+      margin-left: 0;
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      padding: 10px;
   }
 
   .for-teeth-leftpart {
-    align-items: center;
+      align-items: center;
   }
 
   .atetion {
-    justify-content: center;
+      justify-content: center;
   }
 
   .user-btn {
-    display: flex;
-    flex-direction: column;
+      display: flex;
+      flex-direction: column;
 
   }
 
   .user-data {
-    width: 520px;
-    margin: 0 auto;
+      width: 520px;
+      margin: 0 auto;
   }
 
   .container-btn {
-    height: auto;
-    width: 500px;
+      height: auto;
+      width: 500px;
   }
 
   .user-btn {
-    align-items: center;
+      align-items: center;
   }
 
   .one-btn {
-    margin-top: 10px;
+      margin-top: 10px;
   }
 
   .gallery {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .foto {
-    margin-bottom: 15px;
+      margin-bottom: 15px;
   }
 
   footer {
-    flex-direction: column;
-    align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
   }
 
   .dark-logo>span:first-child {
-    font-size: 27px;
+      font-size: 27px;
   }
 
   .leftpart-footer {
-    margin-right: 0px;
-    padding-left: 10px;
+      margin-right: 0px;
+      padding-left: 10px;
   }
 
   .white-text {
-    padding-left: 10px;
+      padding-left: 10px;
   }
 
   .text-footer {
-    grid-template-columns: 150px 1fr;
+      grid-template-columns: 150px 1fr;
   }
 }
 
 
 @media(max-width: 480px) {
-  .logo-top {
-    position: relative;
-    top: -140px;
+ .menu{
+   .logo-top {
+      position: relative;
+      top: -150px;
   }
 
   .header-menu__wrap {
-    display: flex;
+      display: flex;
+  }
+}
+
+  .logo-text {
+      span {
+          font-size: 12px;
+      }
   }
 
-  #logoname {
-    font-size: 12px;
-    text-shadow: #000 0px 1px 1px;
+  .menu {
+      .logo-text {
+          #logoname {
+              font-size: 12px;
+              text-shadow: #000 0px 1px 1px;
+          }
+      }
   }
 
-  .logo-text>span {
-    font-size: 12px;
-  }
-
-  #phone {
-    top: 7px;
-    left: -200px;
-    font-size: 10px;
-
+   #phone {
+      top: 7px;
+      left: -200px;
+      font-size: 10px;
   }
 
   .language-menu {
-    display: none;
+      display: none;
   }
 
   .menu-text {
-    display: none;
+      display: none;
   }
 
   .container {
-    text-align: center;
+      text-align: center;
+      h1 {
+          font-size: 22px;
+      }
   }
 
   .menu-main {
-    width: 130%;
+      width: 130%;
   }
 
-  h1,
   .title-blue_text {
-    font-size: 22px;
+      font-size: 22px;
   }
 
   .title-text {
-    font-size: 12px;
+      font-size: 12px;
+      margin-bottom: 0px;
   }
 
   .btn {
-    display: flex;
-    margin-left: 5vw;
+      display: flex;
+      margin-left: 5vw;
   }
 
   .btn-tel {
-    margin-left: 0;
-    margin-right: 50px;
+      margin-left: 0;
+      margin-right: 50px;
   }
 
   .lady {
-    left: 15px;
-    height: 200px;
-    top: 230px
+      left: 15px;
+      height: 30px;
+      top: 230px
   }
 
   .card-all {
-    flex-direction: column;
-    align-items: start;
-    margin-left: 10px;
+      flex-direction: column;
+      align-items: start;
+      margin-left: 10px;
   }
 
   .table-all {
-    text-align: left;
-    margin-left: 1vw;
+      text-align: left;
+      margin-left: 1vw;
   }
 
   .text-title {
-    text-transform: uppercase;
-    font-size: 20px;
-    width: 480px;
-    margin-left: 0;
+      text-transform: uppercase;
+      font-size: 20px;
+      width: 480px;
+      margin-left: 0;
   }
 
   .text {
-    margin-left: 0;
-    width: 300px;
+      margin-left: 0;
+      width: 300px;
   }
 
   .user-data {
-    display: none;
+      display: none;
   }
 
   .card-all {
-    align-items: flex-start;
-    margin-left: 10vw;
-    margin-top: 180px;
+      align-items: flex-start;
+      margin-left: 10vw;
+      margin-top: 180px;
   }
 
   .table-static {
-    display: flex;
-    flex-direction: column;
-    background-color: #A1C7D4;
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-top: 50px;
-
+      display: flex;
+      flex-direction: column;
+      background-color: #A1C7D4;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 50px;
   }
 
   .cell {
-    width: 70vw;
+      width: 70vw;
   }
 
   .teeth-circle {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
   }
 
   .for-teeth-leftpart {
-    text-align: center;
+      text-align: center;
   }
 
   .center-text {
-    margin-right: 0px;
+      margin-right: 0px;
   }
 
   .teeth-center--2>div {
-    padding-left: 0;
+      padding-left: 0;
   }
 
   .atetion {
-    display: flex;
-    flex-direction: column;
+      display: flex;
+      flex-direction: column;
   }
 
   .gallery {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .foto {
-    margin-bottom: 15px;
+      margin-bottom: 15px;
   }
 
   .teeth-top--1,
   .teeth-top--2 {
-    animation: none;
-  }
-
-  .logo-top {
-    position: relative;
-    top: -140px;
-  }
-
-  .header-menu__wrap {
-    display: flex;
-  }
-
-  #logoname {
-    font-size: 12px;
-    text-shadow: #000 0px 1px 1px;
-  }
-
-  .logo-text>span {
-    font-size: 12px;
-  }
-
-  #phone {
-    top: 7px;
-    left: -200px;
-    font-size: 10px;
-
-  }
-
-  .language-menu {
-    display: none;
-  }
-
-  .menu-text {
-    display: none;
+      animation: none;
   }
 
   .container {
-    text-align: center;
+      text-align: center;
   }
 
   .menu-main {
-    width: 130%;
-  }
-
-  h1,
-  .title-blue_text {
-    font-size: 22px;
+      width: 130%;
   }
 
   .title-text {
-    font-size: 12px;
+      font-size: 12px;
   }
 
   .btn {
-    display: flex;
-    margin-left: 5vw;
+      display: flex;
+      margin-left: 5vw;
   }
 
   .btn-tel {
-    margin-left: 0;
-    margin-right: 50px;
+      margin-left: 0;
+      margin-right: 50px;
   }
 
   .lady {
-    left: 15px;
-    height: 200px;
-    top: 230px
+      position: absolute;
+      left: 15px;
+      height: 200px;
+      top: 230px
   }
 
   .card-all {
-    flex-direction: column;
-    align-items: start;
-    margin-left: 10px;
-  }
-
-  .table-all {
-    text-align: left;
-    margin-left: 1vw;
-  }
-
-  .text-title {
-    text-transform: uppercase;
-    font-size: 20px;
-    width: 480px;
-    margin-left: 0;
-  }
-
-  .text {
-    margin-left: 0;
-    width: 300px;
-  }
-
-  .user-data {
-    display: none;
+      flex-direction: column;
+      align-items: start;
+      margin-left: 10px;
   }
 
   .card-all {
-    align-items: flex-start;
-    margin-left: 10vw;
-    margin-top: 180px;
-  }
-
-  .table-static {
-    display: flex;
-    flex-direction: column;
-    background-color: #A1C7D4;
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-top: 50px;
-
-  }
-
-  .cell {
-    width: 70vw;
+      align-items: flex-start;
+      margin-left: 10vw;
+      margin-top: 180px;
   }
 
   .teeth-circle {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
   }
 
   .for-teeth-leftpart {
-    text-align: center;
+      text-align: center;
   }
 
   .center-text {
-    margin-right: 0px;
+      margin-right: 0px;
   }
 
   .teeth-center--2>div {
-    padding-left: 0;
+      padding-left: 0;
   }
 
   .atetion {
-    display: flex;
-    flex-direction: column;
+      display: flex;
+      flex-direction: column;
   }
 
   .gallery {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .foto {
-    margin-bottom: 15px;
+      margin-bottom: 15px;
   }
 
   .teeth-top--1,
   .teeth-top--2 {
-    animation: none;
+      animation: none;
   }
 
   .teeth-center--1,
   .teeth-center--2,
   .teeth-bottom--1,
   .teeth-bottom--2 {
-    animation: none;
+      animation: none;
   }
 
   footer {
-    flex-direction: column;
-    align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
   }
 
-  .dark-logo>span:first-child {
-    font-size: 27px;
+  .dark-logo {
+      span:first-child {
+          font-size: 27px;
+      }
   }
 
   .leftpart-footer {
-    margin-right: 0px;
-    padding-left: 10px;
+      margin-right: 0px;
+      padding-left: 10px;
   }
 
   .white-text {
-    padding-left: 10px;
+      padding-left: 10px;
   }
 
   .text-footer {
-    grid-template-columns: 150px 1fr;
+      grid-template-columns: 150px 1fr;
   }
 }
