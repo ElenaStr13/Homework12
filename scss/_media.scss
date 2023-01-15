@@ -85,10 +85,14 @@
         left: -40px;
     }
 
-    .lady {
-        left: 100px;
-        height: 170px;
-        top: 247px
+    .menu-main {
+        .container {
+            .lady {
+                left: 100px;
+                height: 170px;
+                top: 247px
+            }
+        }
     }
 
     .gallery {
@@ -203,10 +207,14 @@
         margin-left: 10px;
     }
 
-    .lady {
-        left: 100px;
-        height: 170px;
-        top: 247px
+    .menu-main {
+        .container {
+            .lady {
+                left: 100px;
+                height: 170px;
+                top: 247px
+            }
+        }
     }
 
     .table-all {

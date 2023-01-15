@@ -1,6 +1,6 @@
-@import "normalize";
 @import "variables";
 @import "mixins";
+@import "sample";
 
 /*HEADER*/
 
@@ -267,9 +267,7 @@ main {
   margin: 0 auto;
   h1,
   .title-blue_text {
-    font-weight: 700;
-    font-size: 40px;
-    width: 530px;
+    @extend %title;
   }
   .title-text {
     width: 464px;
@@ -349,8 +347,7 @@ main {
   align-items: center;
   &{
     .text-title {
-      text-transform: uppercase;
-      font-size: 34px;
+      @extend %text-title;
     }
     .text--table {
       font-size: 16px;
@@ -527,11 +524,7 @@ div {
     border-radius: 10px;
     padding: 10px;
     .data-title {
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 32px;
-      padding-top: 29px;
-      padding-left: 25px;
+      @extend %data-title;
     }
   }
 }
