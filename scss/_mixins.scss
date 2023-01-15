@@ -1,3 +1,4 @@
-@mixin sizeFont($size) {
-   
+@mixin triangle($width, $height) {
+    width: $width;
+    height: $height;
 }
