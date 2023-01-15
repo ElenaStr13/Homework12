@@ -133,8 +133,6 @@ li {
   }
 }
 
-
-
 /*BURGER MENU*/
 .menu {
   .header-menu__wrap {
@@ -318,7 +316,7 @@ main {
 .container{
 .lady {
   position: absolute;
-  top: 230px;
+  top: 100px;
   right: 100px;
 }
 .card-all {
@@ -394,15 +392,10 @@ main {
   }
 }
 
-.text-title {
-  text-transform: uppercase;
-  font-size: 34px;
-}
 .number {
   font-size: 65px;
   color: $blue;
 }
-
 
 /*teeth diagram*/
 .teeth {
@@ -556,6 +549,12 @@ div {
     flex-direction: row;
     background-color: #D9D9D9;
     border-radius: 8px;
+
+    button {
+      border-color: #D9D9D9;
+      border: 1px solid #D9D9D9;
+    }
+
     img:first-child {
       padding-top: 16px;
       padding-bottom: 16px;
@@ -578,23 +577,19 @@ div {
   border: 2px solid $blue;
 }
 
-button {
-  border-color: #D9D9D9;
-  border: 1px solid #D9D9D9;
-}
-
-.blue-btn {
+.user-btn{
+  .blue-btn {
   width: 180px;
   background-color: $blue;
   justify-content: center;
   align-items: center;
   color: white;
-}
 
-.sign {
-  background-color: $blue;
-  border: 1px solid $blue;
-}
+  .sign {
+    background-color: $blue;
+    border: 1px solid $blue;
+  }
+}}
 
 .line {
   padding: 13px;
@@ -754,8 +749,6 @@ footer {
   }
 }
 
-
-
 .email {
   color: white;
   font-size: 20px;
@@ -878,7 +871,6 @@ h1,
   100% {
     margin-top: 0px;
   }
-
 }
 
 @keyframes textForTeeth {
@@ -896,596 +888,4 @@ h1,
 }
 
 /*MEDIA*/
-@media(max-width: 1600px) and (min-width: 1200px) {
-  .container {
-      .lady {
-          position: absolute;
-          top: 100px;
-          right: 100px;
-      }
-  }
-}
-
-@media(max-width: 1200px) and (min-width: 1024px) {
-  .card {
-      padding: 5px;
-      gap: 5px;
-      width: 70vw;
-  }
-
-  .card-text {
-      font-size: 12px;
-  }
-
-  .container {
-      .lady {
-          position: absolute;
-          top: 100px;
-          right: 100px;
-      }
-  }
-
-}
-
-@media(max-width: 1024px) and (min-width: 992px) {
-  .menu-text {
-      gap: 10px;
-  }
-
-  #logoname {
-      font-size: 30px;
-  }
-
-  li {
-      a {
-          margin-left: 5vw;
-      }
-  }
-
-  .container {
-      .lady {
-          position: absolute;
-          top: 100px;
-          right: 100px;
-      }
-  }
-
-  .table-static {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 3fr;
-      width: 60vw;
-      gap: 10px;
-      align-items: center;
-  }
-
-  .card {
-      padding: 5px;
-      gap: 5px;
-      width: 70vw;
-  }
-
-  .card-text {
-      font-size: 12px;
-  }
-
-  .leftpart-footer {
-      margin-right: 30%;
-  }
-}
-
-@media(max-width: 992px) and (min-width: 768px) {
-  .menu-text {
-      margin-right: 0px;
-  }
-
-  li>a {
-      margin-left: 0px;
-  }
-
-  #phone {
-      left: 35px;
-      top: 18px;
-  }
-
-  .language-menu {
-      position: relative;
-      top: 50px;
-      left: -40px;
-  }
-
-  .lady {
-      left: 100px;
-      height: 170px;
-      top: 247px
-  }
-
-  .gallery {
-      flex-direction: column;
-  }
-
-  .foto {
-      margin-bottom: 15px;
-  }
-
-  .table-static {
-      grid-template-columns: repeat(2, 300px);
-      grid-template-rows: 3fr;
-      padding-left: 10px;
-      padding-right: 0;
-      gap: 10px;
-      justify-content: left;
-  }
-
-  .card-all {
-      flex-direction: column;
-      align-items: start;
-      margin-left: 10px;
-  }
-
-  .table-all {
-      text-align: left;
-      margin-left: 10px;
-  }
-
-  .text-title {
-      width: 20vw;
-      font-size: 24px;
-  }
-
-  .text {
-      margin-top: 5px;
-      width: 612px;
-      margin: 0;
-      margin-left: 5px;
-  }
-
-  .teeth {
-      padding: 10px;
-      align-items: flex-start;
-  }
-
-  .teeth-circle {
-      margin-left: 0;
-      margin-right: 0;
-      display: flex;
-      flex-direction: column;
-      align-self: flex-start;
-      padding: 10px;
-  }
-
-  .atetion {
-      justify-content: left;
-  }
-
-  .user-btn {
-      display: flex;
-      flex-direction: column;
-  }
-
-  .user-data {
-      width: 520px;
-      margin-left: 10px;
-  }
-
-  .container-btn {
-      height: auto;
-      width: 500px;
-  }
-
-  .user-btn {
-      align-items: center;
-  }
-
-  .one-btn {
-      margin-top: 10px;
-  }
-
-}
-
-@media(max-width: 768px) and (min-width: 480px) {
-  .menu-text {
-      flex-direction: column;
-  }
-
-  li>a {
-      margin-left: 0px;
-  }
-
-  #phone {
-      left: -40px;
-      top: 50px;
-      font-size: 12px;
-  }
-
-  .language-menu {
-      display: none;
-  }
-
-  .card-all {
-      flex-direction: column;
-      align-items: center;
-      margin-left: 10px;
-  }
-
-  .lady {
-      left: 100px;
-      height: 170px;
-      top: 247px
-  }
-
-  .table-all {
-      text-align: center;
-      margin-left: 5px;
-  }
-
-  .table-static {
-      grid-template-columns: repeat(2, 300px);
-      grid-template-rows: 3fr;
-      padding-left: 10px;
-      padding-right: 0;
-      gap: 10px;
-      justify-content: left;
-  }
-
-  .cell {
-      width: 240px;
-  }
-
-  .text-title {
-      width: 70vw;
-      font-size: 24px;
-      margin-left: 5px;
-  }
-
-  .text {
-      margin-top: 5px;
-      width: 612px;
-      margin: 0;
-      margin-left: 5px;
-  }
-
-  .teeth {
-      padding: 10px;
-      align-items: flex-start;
-  }
-
-  .teeth-circle {
-      margin-left: 0;
-      margin-right: 0;
-      display: flex;
-      flex-direction: column;
-      align-self: flex-start;
-      padding: 10px;
-  }
-
-  .for-teeth-leftpart {
-      align-items: center;
-  }
-
-  .atetion {
-      justify-content: center;
-  }
-
-  .user-btn {
-      display: flex;
-      flex-direction: column;
-
-  }
-
-  .user-data {
-      width: 520px;
-      margin: 0 auto;
-  }
-
-  .container-btn {
-      height: auto;
-      width: 500px;
-  }
-
-  .user-btn {
-      align-items: center;
-  }
-
-  .one-btn {
-      margin-top: 10px;
-  }
-
-  .gallery {
-      flex-direction: column;
-  }
-
-  .foto {
-      margin-bottom: 15px;
-  }
-
-  footer {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .dark-logo>span:first-child {
-      font-size: 27px;
-  }
-
-  .leftpart-footer {
-      margin-right: 0px;
-      padding-left: 10px;
-  }
-
-  .white-text {
-      padding-left: 10px;
-  }
-
-  .text-footer {
-      grid-template-columns: 150px 1fr;
-  }
-}
-
-
-@media(max-width: 480px) {
- .menu{
-   .logo-top {
-      position: relative;
-      top: -150px;
-  }
-
-  .header-menu__wrap {
-      display: flex;
-  }
-}
-
-  .logo-text {
-      span {
-          font-size: 12px;
-      }
-  }
-
-  .menu {
-      .logo-text {
-          #logoname {
-              font-size: 12px;
-              text-shadow: #000 0px 1px 1px;
-          }
-      }
-  }
-
-   #phone {
-      top: 7px;
-      left: -200px;
-      font-size: 10px;
-  }
-
-  .language-menu {
-      display: none;
-  }
-
-  .menu-text {
-      display: none;
-  }
-
-  .container {
-      text-align: center;
-      h1 {
-          font-size: 22px;
-      }
-  }
-
-  .menu-main {
-      width: 130%;
-  }
-
-  .title-blue_text {
-      font-size: 22px;
-  }
-
-  .title-text {
-      font-size: 12px;
-      margin-bottom: 0px;
-  }
-
-  .btn {
-      display: flex;
-      margin-left: 5vw;
-  }
-
-  .btn-tel {
-      margin-left: 0;
-      margin-right: 50px;
-  }
-
-  .lady {
-      left: 15px;
-      height: 30px;
-      top: 230px
-  }
-
-  .card-all {
-      flex-direction: column;
-      align-items: start;
-      margin-left: 10px;
-  }
-
-  .table-all {
-      text-align: left;
-      margin-left: 1vw;
-  }
-
-  .text-title {
-      text-transform: uppercase;
-      font-size: 20px;
-      width: 480px;
-      margin-left: 0;
-  }
-
-  .text {
-      margin-left: 0;
-      width: 300px;
-  }
-
-  .user-data {
-      display: none;
-  }
-
-  .card-all {
-      align-items: flex-start;
-      margin-left: 10vw;
-      margin-top: 180px;
-  }
-
-  .table-static {
-      display: flex;
-      flex-direction: column;
-      background-color: #A1C7D4;
-      border-radius: 10px;
-      padding: 16px 20px;
-      margin-top: 50px;
-  }
-
-  .cell {
-      width: 70vw;
-  }
-
-  .teeth-circle {
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-  }
-
-  .for-teeth-leftpart {
-      text-align: center;
-  }
-
-  .center-text {
-      margin-right: 0px;
-  }
-
-  .teeth-center--2>div {
-      padding-left: 0;
-  }
-
-  .atetion {
-      display: flex;
-      flex-direction: column;
-  }
-
-  .gallery {
-      flex-direction: column;
-  }
-
-  .foto {
-      margin-bottom: 15px;
-  }
-
-  .teeth-top--1,
-  .teeth-top--2 {
-      animation: none;
-  }
-
-  .container {
-      text-align: center;
-  }
-
-  .menu-main {
-      width: 130%;
-  }
-
-  .title-text {
-      font-size: 12px;
-  }
-
-  .btn {
-      display: flex;
-      margin-left: 5vw;
-  }
-
-  .btn-tel {
-      margin-left: 0;
-      margin-right: 50px;
-  }
-
-  .lady {
-      position: absolute;
-      left: 15px;
-      height: 200px;
-      top: 230px
-  }
-
-  .card-all {
-      flex-direction: column;
-      align-items: start;
-      margin-left: 10px;
-  }
-
-  .card-all {
-      align-items: flex-start;
-      margin-left: 10vw;
-      margin-top: 180px;
-  }
-
-  .teeth-circle {
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-  }
-
-  .for-teeth-leftpart {
-      text-align: center;
-  }
-
-  .center-text {
-      margin-right: 0px;
-  }
-
-  .teeth-center--2>div {
-      padding-left: 0;
-  }
-
-  .atetion {
-      display: flex;
-      flex-direction: column;
-  }
-
-  .gallery {
-      flex-direction: column;
-  }
-
-  .foto {
-      margin-bottom: 15px;
-  }
-
-  .teeth-top--1,
-  .teeth-top--2 {
-      animation: none;
-  }
-
-  .teeth-center--1,
-  .teeth-center--2,
-  .teeth-bottom--1,
-  .teeth-bottom--2 {
-      animation: none;
-  }
-
-  footer {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .dark-logo {
-      span:first-child {
-          font-size: 27px;
-      }
-  }
-
-  .leftpart-footer {
-      margin-right: 0px;
-      padding-left: 10px;
-  }
-
-  .white-text {
-      padding-left: 10px;
-  }
-
-  .text-footer {
-      grid-template-columns: 150px 1fr;
-  }
-}
+@import "media"
